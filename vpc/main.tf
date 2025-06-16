@@ -1,4 +1,3 @@
-// VPC 생성성
 resource "aws_vpc" "tf_vpc" {
   cidr_block = var.vpc_cidr
 
@@ -10,7 +9,6 @@ resource "aws_vpc" "tf_vpc" {
   }
 }
 
-// 인터넷 게이트웨이 생성
 resource "aws_internet_gateway" "tf_igw" {
   vpc_id = aws_vpc.tf_vpc.id
 
